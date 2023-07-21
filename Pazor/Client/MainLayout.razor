@@ -1,0 +1,23 @@
+﻿@inherits LayoutComponentBase
+<MudThemeProvider />
+
+<MudLayout>
+    <MudAppBar Class="d-flex justify-center">
+        <SectionOutlet SectionName="TopBarLeft"></SectionOutlet>
+        <MudSpacer />
+        <MudText Typo="Typo.h5">Movies</MudText>
+        <MudSpacer />
+        <SectionOutlet SectionName="TopBarRight"></SectionOutlet>
+    </MudAppBar>
+    <MudMainContent>
+        <MudContainer Class="py-4" MaxWidth="MaxWidth.ExtraExtraLarge">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+
+
+    <div class="@(_isInitializing ? "overlay" : "overlay hidden")">
+        <MudAlert Severity="Severity.Info" Icon="@Icons.Material.Filled.Downloading">Loading</MudAlert>
+    </div>

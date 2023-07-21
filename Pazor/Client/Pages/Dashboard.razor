@@ -1,0 +1,18 @@
+﻿@page "/"
+@using Pazor.Client.Services;
+@attribute [StreamRendering(true)]
+
+<div class="dashboard">
+    <MudPaper Class="pa-16" Outlined="true">
+        <MudButton OnClick="@(() => NavigateTo(TmdbService.NowPlaying))">Now Playing</MudButton>
+    </MudPaper>
+    <MudPaper Class="pa-16" Outlined="true">
+        <MudButton OnClick="@(() => NavigateTo(TmdbService.TopRated))">Top Rated</MudButton>
+    </MudPaper>
+    <MudPaper Class="pa-16" Outlined="true">
+        <MudButton OnClick="@(() => NavigateTo(TmdbService.Upcoming))">Up coming</MudButton>
+    </MudPaper>
+    <MudPaper Class="pa-16" Outlined="true">
+        <MudButton OnClick="@(() => NavigateTo(TmdbService.Popular))">Popular</MudButton>
+    </MudPaper>
+</div>

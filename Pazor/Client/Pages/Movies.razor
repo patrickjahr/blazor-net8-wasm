@@ -1,0 +1,10 @@
+﻿@page "/movies/{topic}"
+@attribute [StreamRendering(true)]
+@using Pazor.Client.Services;
+
+<SectionContent SectionName="TopBarLeft">
+    <MudIconButton OnClick="GoBack" Color="Color.Inherit" Icon="@Icons.Material.Outlined.ChevronLeft"></MudIconButton>
+</SectionContent>
+
+<MovieList Topic="@Topic"></MovieList>
+

@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RazorLangVersion>8.0</RazorLangVersion>
+		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="wwwroot\css\app.scss" />
+	  <Content Remove="wwwroot\css\styles\theme.scss" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.SassCompiler" Version="1.63.6" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0-preview.6.23329.11" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0-preview.6.23329.11" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0-preview.6.23329.7" />
+		<PackageReference Include="MudBlazor" Version="6.7.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Pazor.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="wwwroot\css\app.scss" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\css\app.scss" />
+	  <None Include="wwwroot\css\styles\theme.scss" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="pages\Dashboard.razor.scss" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="wwwroot\css\styles\theme.scss" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="pages\NowPlaying.razor.scss" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="Components\MovieList.razor.scss" />
+	</ItemGroup>
+
+</Project>

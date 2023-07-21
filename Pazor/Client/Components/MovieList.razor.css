@@ -1,0 +1,13 @@
+.dashboard {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+.dashboard ::deep .poster {
+  height: 6rem;
+}
+.dashboard ::deep .info {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/*# sourceMappingURL=Movies.razor.css.map */

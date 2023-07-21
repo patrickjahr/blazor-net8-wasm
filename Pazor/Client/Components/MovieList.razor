@@ -1,0 +1,20 @@
+﻿@using Pazor.Client.Services;
+<div class="d-grid dashboard">
+    @if (_nowPlaying.Any())
+    {
+        @foreach (var movie in _nowPlaying)
+        {
+            <MudPaper Class="pa-4 gap-4 d-flex align-center" Outlined="true" Square="true">
+                @if (!string.IsNullOrWhiteSpace(movie.PosterPath))
+                {
+                    <img class="poster" alt="" src="@($"{TmdbService.ImageBaseUrl}{movie.PosterPath}")" />
+                }
+                <div class="info d-flex">
+                    <p>@movie.Title</p>
+                    <p>@movie.ReleaseDate</p>
+                    <p>@movie.VoteAverage / @movie.VoteCount</p>
+                </div>
+            </MudPaper>
+        }
+    }
+</div>
